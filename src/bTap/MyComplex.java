@@ -75,7 +75,7 @@ public class MyComplex {
         return new MyComplex(this.real * another.real - this.imag * another.imag, this.real * another.imag + this.imag * another.real);
     }
 
-    public MyComplex dividedBy(MyComplex another) {
+    public MyComplex divideBy(MyComplex another) {
         double denominator = another.real * another.real + another.imag * another.imag;
         return new MyComplex((this.real * another.real + this.imag * another.imag) / denominator, (this.imag * another.real - this.real * another.imag) / denominator);
     }

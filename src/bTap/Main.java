@@ -2,39 +2,31 @@ package bTap;
 
 public class Main {
 
-    public static void TestMyCycle() {
-        MyPoint p1 = new MyPoint(3, 0);
-        MyPoint p2 = new MyPoint(0, 4);
-
-        System.out.println(p1.distance(p2));
-        System.out.println(p1.distance(5, 6));
-
-        MyPoint[] points = new MyPoint[10];
-        for (int i = 0; i < points.length; i++) {
-            points[i] = new MyPoint(i + 1, i + 1);
-        }
-
-        for (MyPoint point : points) {
-            System.out.println(point);
-        }
-    }
-
-    public static void TestMyTriangle() {
-        MyPoint p1 = new MyPoint(0, 0);
-        MyPoint p2 = new MyPoint(3, 0);
-        MyPoint p3 = new MyPoint(0, 4);
-
-        MyTriangle t1 = new MyTriangle(p1, p2, p3);
-        System.out.println(t1);
-        System.out.println(t1.getPerimeter());
-    }
 
     public static void main(String[] args) {
+        MyComplex c1 = new MyComplex(1.1, 2.2);
+        System.out.println(c1);
+        System.out.println("real is: " + c1.getReal());
+        System.out.println("imag is: " + c1.getImag());
+        System.out.println("magnitude is: " + c1.magnitude());
+        System.out.println("argument in radians is: " + c1.argumentInRadians());
+        System.out.println("argument in degrees is: " + c1.argumentInDegrees());
+        System.out.println("conjugate is: " + c1.conjugate());
 
-        //Test MyCircle
-        TestMyCycle();
+        MyComplex c2 = new MyComplex(3.3, 4.4);
+        System.out.println("c1 is " + c1);
+        System.out.println("c2 is " + c2);
+        System.out.println("c1 is equal to c2? " + c1.equals(c2));
+        System.out.println("c1 is equal to c1? " + c1.equals(c1));
+        System.out.println("c1 is real? " + c1.isReal());
+        System.out.println("c1 is imaginary? " + c1.isImaginary());
+        System.out.println("c2 is real? " + c2.isReal());
+        System.out.println("c2 is imaginary? " + c2.isImaginary());
 
-        //Test MyTriangle
-        TestMyTriangle();
+
+        System.out.println("c1 + c2 is " + c1.add(c2));
+        System.out.println("c1 - c2 is " + c1.subtract(c2));
+        System.out.println("c1 * c2 is " + c1.multiplyWith(c2));
+        System.out.println("c1 / c2 is " + c1.divideBy(c2));
     }
 }
