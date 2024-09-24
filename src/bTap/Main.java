@@ -1,43 +1,31 @@
 package bTap;
 
 public class Main {
-
-    public static void TestMyTime() {
-        MyTime myTime = new MyTime(23, 59, 59);
-        System.out.println(myTime);
-        System.out.println(myTime.nextSecond());
-        System.out.println(myTime.nextMinute());
-        System.out.println(myTime.nextHour());
-        System.out.println(myTime.previousSecond());
-        System.out.println(myTime.previousMinute());
-        System.out.println(myTime.previousHour());
-    }
-
-    public static void TestMyDate() {
-        MyDate d1 = new MyDate(2012, 2, 28);
-        System.out.println(d1);    //  Tuesday  28  Feb  2012
-        System.out.println(d1.nextDay());    //  Wednesday  29  Feb  2012
-        System.out.println(d1.nextDay());    //  Thursday  1  Mar  2012
-        System.out.println(d1.nextMonth());  //  Sunday  1  Apr  2012
-        System.out.println(d1.nextYear());    //  Monday  1  Apr  2013
-
-        MyDate d2 = new MyDate(2012, 1, 2);
-        System.out.println(d2);    //  Monday  2  Jan  2012
-        System.out.println(d2.previousDay());    //  Sunday  1  Jan  2012
-        System.out.println(d2.previousDay());    //  Saturday  31  Dec  2011
-        System.out.println(d2.previousMonth());  //  Wednesday  30  Nov  2011
-        System.out.println(d2.previousYear());    //  Tuesday  30  Nov  2010
-
-        MyDate d3 = new MyDate(2012, 2, 29);
-        System.out.println(d3.previousYear());    //  Monday  28  Feb  2011
-
-//        MyDate d4 = new MyDate(2099, 11, 31);  //  Invalid  year,  month,  or  day!
-//        MyDate d5 = new MyDate(2011, 2, 29);    //  Invalid  year,  month,  or  day!
-
-    }
-
     public static void main(String[] args) {
-        //TestMyTime();
-        TestMyDate();
+        Cylinder c1 = new Cylinder();
+        System.out.println("Cylinder:"
+                + "  radius=" + c1.getRadius()
+                + "  height=" + c1.getHeight()
+                + " base area=" + c1.getArea()
+                + "  volume=" + c1.getVolume());
+
+        Cylinder c2 = new Cylinder(10.0);
+        System.out.println("Cylinder:"
+                + "  radius=" + c2.getRadius()
+                + "  height=" + c2.getHeight()
+                + " base area=" + c2.getArea()
+                + "  volume=" + c2.getVolume());
+
+        Cylinder c3 = new Cylinder(2.0, 10.0);
+        System.out.println("Cylinder:"
+                + "  radius=" + c3.getRadius()
+                + "  height=" + c3.getHeight()
+                + " base area=" + c3.getArea()
+                + "  volume=" + c3.getVolume());
+
+        System.out.println(c3.toString());
+        System.out.println(c3.getArea());
+
+
     }
 }
