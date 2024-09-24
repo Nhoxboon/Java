@@ -2,31 +2,42 @@ package bTap;
 
 public class Main {
 
+    public static void TestMyTime() {
+        MyTime myTime = new MyTime(23, 59, 59);
+        System.out.println(myTime);
+        System.out.println(myTime.nextSecond());
+        System.out.println(myTime.nextMinute());
+        System.out.println(myTime.nextHour());
+        System.out.println(myTime.previousSecond());
+        System.out.println(myTime.previousMinute());
+        System.out.println(myTime.previousHour());
+    }
+
+    public static void TestMyDate() {
+        MyDate d1 = new MyDate(2012, 2, 28);
+        System.out.println(d1);    //  Tuesday  28  Feb  2012
+        System.out.println(d1.nextDay());    //  Wednesday  29  Feb  2012
+        System.out.println(d1.nextDay());    //  Thursday  1  Mar  2012
+        System.out.println(d1.nextMonth());  //  Sunday  1  Apr  2012
+        System.out.println(d1.nextYear());    //  Monday  1  Apr  2013
+
+        MyDate d2 = new MyDate(2012, 1, 2);
+        System.out.println(d2);    //  Monday  2  Jan  2012
+        System.out.println(d2.previousDay());    //  Sunday  1  Jan  2012
+        System.out.println(d2.previousDay());    //  Saturday  31  Dec  2011
+        System.out.println(d2.previousMonth());  //  Wednesday  30  Nov  2011
+        System.out.println(d2.previousYear());    //  Tuesday  30  Nov  2010
+
+        MyDate d3 = new MyDate(2012, 2, 29);
+        System.out.println(d3.previousYear());    //  Monday  28  Feb  2011
+
+//        MyDate d4 = new MyDate(2099, 11, 31);  //  Invalid  year,  month,  or  day!
+//        MyDate d5 = new MyDate(2011, 2, 29);    //  Invalid  year,  month,  or  day!
+
+    }
 
     public static void main(String[] args) {
-        MyComplex c1 = new MyComplex(1.1, 2.2);
-        System.out.println(c1);
-        System.out.println("real is: " + c1.getReal());
-        System.out.println("imag is: " + c1.getImag());
-        System.out.println("magnitude is: " + c1.magnitude());
-        System.out.println("argument in radians is: " + c1.argumentInRadians());
-        System.out.println("argument in degrees is: " + c1.argumentInDegrees());
-        System.out.println("conjugate is: " + c1.conjugate());
-
-        MyComplex c2 = new MyComplex(3.3, 4.4);
-        System.out.println("c1 is " + c1);
-        System.out.println("c2 is " + c2);
-        System.out.println("c1 is equal to c2? " + c1.equals(c2));
-        System.out.println("c1 is equal to c1? " + c1.equals(c1));
-        System.out.println("c1 is real? " + c1.isReal());
-        System.out.println("c1 is imaginary? " + c1.isImaginary());
-        System.out.println("c2 is real? " + c2.isReal());
-        System.out.println("c2 is imaginary? " + c2.isImaginary());
-
-
-        System.out.println("c1 + c2 is " + c1.add(c2));
-        System.out.println("c1 - c2 is " + c1.subtract(c2));
-        System.out.println("c1 * c2 is " + c1.multiplyWith(c2));
-        System.out.println("c1 / c2 is " + c1.divideBy(c2));
+        //TestMyTime();
+        TestMyDate();
     }
 }
