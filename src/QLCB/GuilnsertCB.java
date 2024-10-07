@@ -70,9 +70,9 @@ public class GuilnsertCB extends JFrame {
                 CanBo canBo = new CanBo(soTK, hoTen, GT, diachi, luong);
                 QLCB qlcb = new QLCB();
                 if (qlcb.insertCB(canBo)) {
-                    JOptionPane.showMessageDialog(null, "Success");
+                    JOptionPane.showMessageDialog(null, "Thêm thành công");
                 } else {
-                    JOptionPane.showMessageDialog(null, "You fucking failure");
+                    JOptionPane.showMessageDialog(null, "Thêm không thành công");
                 }
             }
         });

@@ -6,9 +6,9 @@ public class Test_insertCB {
     public static void doInsertCB(CanBo canBo) {
         QLCB qlcb = new QLCB();
         if (qlcb.insertCB(canBo)) {
-            System.out.println("Success");
+            System.out.println("Thêm thành công");
         } else {
-            System.out.println("You fucking failure");
+            System.out.println("Thêm không thành công");
         }
     }
 

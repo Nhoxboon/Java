@@ -12,7 +12,7 @@ public class QLCB implements ICanBo {
     public Connection getCon() {
         try {
             if (cn == null || cn.isClosed()) {
-                cn = DriverManager.getConnection("//null", "root", "password");
+                cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/QLCB", "root", "15062004");
             }
         } catch (SQLException e) {
             e.printStackTrace();
