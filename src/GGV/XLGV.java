@@ -8,9 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XLGV {
+    private Connection cn;
+
     public Connection getCon() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/DLGV", "root", "password");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/DLGV", "root", "15062004");
         } catch (Exception e) {
             e.printStackTrace();
             return null;
