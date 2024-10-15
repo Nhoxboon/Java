@@ -2,6 +2,6 @@ package GSach;
 
 public class Main {
     public static void main(String[] args) {
-        new GUI_delSA();
+        new GUI_findSA();
     }
 }
