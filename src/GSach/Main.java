@@ -1,7 +1,7 @@
-package GKH;
+package GSach;
 
 public class Main {
     public static void main(String[] args) {
-        new GUI_updateKH();
+        new GUI_delSA();
     }
 }
